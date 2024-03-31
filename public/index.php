@@ -27,7 +27,7 @@ $router->get("/crear-cuenta", [LoginController::class , "crear"]);
 $router->post("/crear-cuenta", [LoginController::class , "crear"]);
 
 // Confirmar Cuenta
-$router->get("/confirmar-cuenta", [LoginController::class , "confirmar"]);
+$router->get("/confirmar", [LoginController::class , "confirmar"]);
 $router->get("/mensaje", [LoginController::class , "mensaje"]);
 
 

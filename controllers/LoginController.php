@@ -209,7 +209,7 @@ class LoginController {
         $alertas = Usuario::getAlertas();
         
         // Renderizar la vista
-        $router->render("auth/confirmar-cuenta", [
+        $router->render("auth/confirmar", [
             "alertas" => $alertas
         ]);
 
