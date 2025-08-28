@@ -4,18 +4,18 @@ namespace Model;
 
 class CitasServicios extends ActiveRecord {
 
-    protected static $tabla = "citasservicios";
-    protected static $columnasDB = ["id", "citaID", "servicioID"];
+    protected static $tabla = "citasServicios";
+    protected static $columnasDB = ["id", "citaid", "servicioid"];
 
     public $id;
-    public $citaID;
-    public $servicioID;
+    public $citaid;
+    public $servicioid;
 
     public function __construct($args = [])
     {
         $this->id = $args["id"] ?? null;
-        $this->citaID = $args["citaID"] ?? "";
-        $this->servicioID = $args["servicioID"] ?? "";
+        $this->citaid = $args["citaid"] ?? "";
+        $this->servicioid = $args["servicioid"] ?? "";
     }
 
 
