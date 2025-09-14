@@ -3,8 +3,9 @@
 namespace Controllers;
 
 use Classes\Email;
-use Model\Usuario;
+
 use MVC\Router;
+use Model\Usuario;
 
 class LoginController {
     public static function login(Router $router) {
@@ -24,7 +25,7 @@ class LoginController {
                     // Verficar el password
                     if ($usuario->comprobarPasswordAndVerificado($auth->password)) {
                         // Autenticar el usuario
-                        session_start();
+                        // session_start();
 
                         $_SESSION["id"] = $usuario->id;
                         $_SESSION["nombre"] = $usuario->nombre . " " . $usuario->apellido;
