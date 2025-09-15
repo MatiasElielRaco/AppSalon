@@ -121,18 +121,10 @@ function paginaSiguiente() {
 async function consultarAPI() {
 
         try {
-            // const url = `${location.origin}/api/servicios`;
-            // const resultado = await fetch(url);
-            // const servicios = await resultado.json();
-            fetch(`${location.origin}/api/servicios`)
-            .then(res => {
-                console.log("Status:", res.status);
-                return res.text(); // en lugar de json()
-            })
-            .then(data => {
-                console.log("Respuesta cruda:", data);
-            })
-            .catch(err => console.error(err));;
+            const url = `${location.origin}/api/servicios`;
+            const resultado = await fetch(url);
+            const servicios = await resultado.json();
+            mostrarServicios(servicios);
 
         } catch (error) {
             console.log(error);
